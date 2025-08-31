@@ -1,0 +1,75 @@
+This is consider the file or code that i crated while watching chai with django lectures on the Youtube. 
+that's it not more on it. 
+
+
+
+
+video 2: like basic of how to create a first django main app file
+django-admin startproject (Your_Your_Name)
+
+importat one of automactic reloading of the tailwind css
+
+# this is the actual path for reloading the tailwind css 
+this is not used after the project level of build command....
+path("__reload__/", include ("django_browser_reload.urls")),
+
+# creating a superuser
+python manage.py createsuperuser
+
+# pip install django_browser_reload 
+this command is also need install for the reload one.... 
+
+video 3.
+
+video 3 is mainly focusd on this ok
+how to manage the path..
+
+while importing the css.
+STATICFILES_DIRS =  [os.path.join(BASE_DIR, 'static')]
+
+only loading the html, css and configured the path in setting.py file
+
+
+load static one is remaining 
+
+video 4 IS ALL ABOUT HOW TO CREATE A APP INSIDE THE MAIN PROJECT AND HOW TO LINK EACH OTHERS FILES LIKE: ( CSS, JS ETC...)
+
+while creating a sub app then it is need to LINk link: localhost:8000/keshav/contanct now condition....
+
+# while creating a sub file of app (keshav...)
+path('keshav/', include('keshav.urls')),
+
+VIDEO: 5
+working with models and databases.
+
+this is for the models and handing the images....
+
+MEDIA_URL = '/media'/
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+this two import are important..
+from django.conf import settings
+from django.conf.urls.static import static
+
+this import is also need to mentioned in URL.py so,
+after the 
+] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+
+this can hangle if my modle's throw's this MEDIA_URL and MEDIA_ROOT then it will determine the corrected path...
+
+making the tailwind setup
+
+installing the correct version of 3.5.0 
+pip install django-tailwind==3.5.0
+
+python manage.py tailwind init 
+
+cd theme/static_src (inside the theme directry)
+npm is always install in package.json file so, if it show some error then fild the package.json file in theme...(error one!!)
+npm install
+cd .. 
+add the path of npm and node in env variable...
+python manage.py tailwind start ( this is the final and important one..) to load the tailwind css in the main project...
+
+
+video: 6 is all about the how to make the database models as well as how to make button workable....

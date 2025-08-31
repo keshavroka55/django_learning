@@ -1,0 +1,40 @@
+1. create a venv for new project..[python -m venv (env_name)]
+2. create a vlog folder [django-admin startproject (project_name)]
+3. install django [pip install Django]
+4. test the initial setup [python manage.py runserver]
+
+now, some setting configuration....
+
+create templates, static files and layout.html file
+1. configure the path of every page in views.py and urls.py (the proper path!)
+2. add the templates path in the settings.py file.
+
+3. intall the theme ( python manage.py tailwind init theme)
+4. then, npm install the package.json file..
+
+making the tailwind setup
+
+installing the correct version of 3.5.0 
+pip install django-tailwind==3.5.0
+
+python manage.py tailwind init 
+
+cd theme/static_src (inside the theme directry)
+npm is always install in package.json file so, if it show some error then fild the package.json file in theme...(error one!!)
+npm install
+cd .. 
+add the path of npm and node in env variable...
+python manage.py tailwind start ( this is the final and important one..) to load the tailwind css in the main project...
+
+5. now make the setting of autoreload tailwind....
+
+creating a sub app or folder in django: ( python manage.py startapp app_name...)
+adding all necceary setting in the setting.py file and checking the /app file is working or not..
+
+1. creating the code of models...
+2. register in the admin.py (admin.site.register(model_name))
+
+
+while updating the version in requirements.txt file
+pip freeze > requirements.txt (command...)
+
